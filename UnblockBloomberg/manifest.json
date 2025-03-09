@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "UnblockBloomberg",
+  "version": "1.0",
+  "description": "Remove ads and footer banner elements and disable blur layer.",
+  "permissions": ["activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.bloomberg.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
